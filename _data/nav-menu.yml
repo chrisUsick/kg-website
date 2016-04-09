@@ -1,0 +1,6 @@
+- link: Home
+  main: true
+  url: /
+
+- link: Drawings
+  url: /drawings

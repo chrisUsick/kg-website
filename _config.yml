@@ -24,3 +24,15 @@ sass:
   load_paths:
     - _sass
     - assets/vendor/foundation-sites/scss
+
+collections:
+  drawings:
+    output: true
+    path: /drawings/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: drawings
+    values:
+      layout: drawing

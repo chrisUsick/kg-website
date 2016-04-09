@@ -2,11 +2,15 @@
   <nav class="top-bar">
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">
-          <a href="/">{{ site.title }}</a></li>
+        {% for item in site.data.nav-menu %}
+          {% if item.main %}
 
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/skills">Skills</a></li>
+          {% endif %}
+          <li class="{% if item.main %}menu-text{% endif %}">
+            <a href="{{ item.url }}">{{ item.link }}</a>
+          </li>
+        {% endfor %}
+
       </ul>
     </div>
 
