@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<div class="row drawing-list">
+  {% for drawing in site.drawings %}
+
+    {% unless drawing.meta %}
+      <div class="columns large-6" >
+        <a href="{{drawing.url}}">
+          <div class="card">
+            <div class="image">
+              <img src="/assets/images/{{drawing.images.medium}}">
+              <span class="title">{{ drawing.title }}</span>
+            </div>
+            <div class="content">
+              <p>{{ drawing.content }}</p>
+            </div>
+            <!-- <div class="action">
+              <a href='#'>Where this leads</a>
+            </div> -->
+          </div>
+        </a>
+      </div>
+    {% endunless %}
+
+
+  {% endfor %}
+</div>
