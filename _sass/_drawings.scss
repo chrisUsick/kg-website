@@ -1,3 +1,4 @@
 .drawing-list {
   margin-top: 5px;
+  @include flex-align('center')
 }
